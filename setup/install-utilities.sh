@@ -6,3 +6,5 @@
 sudo apt-get -y install rpi-update \
 			xrdp \
 			nmap \
+			at \
+			telnet \
