@@ -8,3 +8,4 @@ sudo apt-get -y install rpi-update \
 			nmap \
 			at \
 			telnet \
+                        bc \
