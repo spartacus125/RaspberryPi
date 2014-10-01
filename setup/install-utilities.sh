@@ -9,3 +9,4 @@ sudo apt-get -y install rpi-update \
 			at \
 			telnet \
                         bc \
+			rrdtool \
