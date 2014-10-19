@@ -9,17 +9,27 @@ gstreamer0.10-fluendo-mp3 gstreamer0.10-plugins-base \
 gstreamer0.10-plugins-good gstreamer0.10-pulseaudio \
 gstreamer0.10-tools libglib2.0-dev libgstreamer0.10-0 \
 libgstreamer0.10-dev libgstreamer-plugins-base0.10-0 libupnp-dev \
-libxml2-dev
+libxml2-dev mpg321
+
+# Add dependency for new GStreamer
+
+sudo wget -O - http://www.chiark.greenend.org.uk/~christi/debian/christi@coraline.org.gpg.key | sudo apt-key add -
+sudo -sh 'echo "deb http://www.chiark.greenend.org.uk/~christi/debian/ wheezy main" > /etc/apt/sources.list.d/upnprender.list'
+
+# Install updated GStreamer
+
+sudo apt-get update
+sudo apt-get install libupnp-dev libgstreamer1.0-dev gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-alsa
 
 # Pull down repository
 
-pushd ..
+pushd ~/RaspberryPi
 git clone https://github.com/spartacus125/gmrender-resurrect.git
 popd
 
 # Run configuration
 
-pushd ../gmrender-resurrect
+pushd ~/RaspberryPi/gmrender-resurrect
 ./autogen.sh
 ./configure --prefix=`pwd` && make install
 
