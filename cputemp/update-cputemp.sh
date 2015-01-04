@@ -2,6 +2,9 @@
 #
 # update .rrd database with CPU temperature
 
+# TODO: Add this to crontab ('sudo crontab -e')
+#   */5 * * * * /home/pi/RaspberryPi/cputemp/update-cputemp.sh
+
 OUT_DIR=/home/pi/RaspberryPi/cputemp
 PUBLISH_DIR=/home/www-data/web2py/applications/Sunrise_Clock/static/images
 
